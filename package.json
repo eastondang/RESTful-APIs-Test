@@ -1,0 +1,26 @@
+{
+  "name": "restful-apis-test",
+  "version": "1.0.0",
+  "description": "express server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eastondang/RESTful-APIs-Test.git"
+  },
+  "keywords": [
+    "express",
+    "CRUD"
+  ],
+  "author": "easton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eastondang/RESTful-APIs-Test/issues"
+  },
+  "homepage": "https://github.com/eastondang/RESTful-APIs-Test#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

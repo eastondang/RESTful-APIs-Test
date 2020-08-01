@@ -1,9 +1,23 @@
-// Import the express library here
 const express = require('express');
-// Instantiate the app here
-const app = new express();
+const app = express();
+const { seedElements } = require('./utils');
+
+// Serves Express Yourself website
+app.use(express.static('public'));
 
 const PORT = process.env.PORT || 4001;
+// Use static server to serve the Express Yourself Website
+app.use(express.static('public'));
 
-// Invoke the app's `.listen()` method below:
-app.listen(PORT, ()=>console.log('server started!'));
+const expressions = [];
+seedElements(expressions, 'expressions');
+
+// Get all expressions
+app.get('/expressions', (req, res, next) => {
+  console.log(req);
+  res.send(expressions);
+});
+
+app.listen(PORT, () => {
+  console.log(`Listening on port ${PORT}`);
+});
